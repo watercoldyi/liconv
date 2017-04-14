@@ -1,23 +1,15 @@
 
-simple character convert for lua,suport lua 5.3   
+libiconv for lua 
 
-
-complie
------
-just only suport windows(mingw)   
-"make mingw"    
-
+ 
 Lua API
 ----
 ```
 local liconv = require "liconv"
 ```
-* `liconv.conv(from,to,s)` convert    
-  `from` character encode for s. "gbk" or "utf8"    
-  `to` character encode for target. "gbk" or "utf8"   
-  `s` string that would convert   
+* `liconv.iconv(from,to,s)` from 和 to 与libiconv库的要求相同
 
-  return s, if from equal to;return nil,if convert fail;return string,if convert success
+ 成功返回转换后的字符串,否则返回nil
 
 
 
